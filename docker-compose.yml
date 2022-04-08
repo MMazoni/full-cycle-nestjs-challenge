@@ -3,7 +3,8 @@ version: '3'
 services:
   app:
     build: .
-    command: "sh -c 'npm install && npm run start:dev'"
+    entrypoint: .docker/entrypoint.sh
+    container_name: "imersao-full-cyle-nest"
     ports:
       - 3000:3000
     volumes:
